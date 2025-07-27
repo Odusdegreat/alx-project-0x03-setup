@@ -1,18 +1,14 @@
-import { ReactNode } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+// components/layouts/Layout.tsx
 
-interface LayoutProps {
-  children: ReactNode;
-}
+import { LayoutProps } from "@/interfaces";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+    <div className="flex flex-col min-h-screen">
+      {/* Header here if any */}
+      <main className="flex-grow">{children}</main>
+      {/* Footer here if any */}
+    </div>
   );
 };
 
